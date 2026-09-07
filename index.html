@@ -6,257 +6,34 @@
 <meta name="description" content="Richard Vargas Insurance — Seguros de salud y vida con asesoría personalizada en español.">
 <title>Richard Vargas Insurance</title>
 <style>
-:root{
-  --navy:#062f4a;--navy2:#0a4667;--sky:#33c3ef;--teal:#049a8b;--green:#098d48;
-  --gold:#f1c870;--ink:#0b2d45;--muted:#587183;--paper:#f5f9fc;--white:#fff;
-  --shadow:0 18px 50px rgba(6,47,74,.12);
-}
-*{box-sizing:border-box}
-html{scroll-behavior:smooth}
-body{margin:0;font-family:Inter,Arial,sans-serif;background:var(--paper);color:var(--ink)}
-a{color:inherit}
-.wrap{max-width:1180px;margin:auto;padding:0 24px}
-header{background:rgba(255,255,255,.96);position:sticky;top:0;z-index:20;box-shadow:0 2px 16px #0000000d;backdrop-filter:blur(12px)}
-.nav{min-height:76px;display:flex;align-items:center;justify-content:space-between;gap:20px}
-.logo{font-weight:900;font-size:23px;line-height:1;color:#0a3152}.logo span{color:var(--teal)}.logo small{font-size:11px;letter-spacing:3px}
-.links{display:flex;align-items:center;gap:18px}.links a{text-decoration:none;font-size:14px;font-weight:700;color:#294759}
-.links a:hover{color:var(--teal)}
-.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:14px 22px;border-radius:999px;background:var(--green);color:white;text-decoration:none;font-weight:800;box-shadow:0 8px 22px rgba(9,141,72,.18);transition:.2s}
-.btn:hover{transform:translateY(-2px)}
-.hero{position:relative;overflow:hidden;background:linear-gradient(110deg,#042f4c 0%,#075476 58%,#071f31 100%);color:white;padding:68px 0 54px}
-.hero:before,.hero:after{content:"";position:absolute;border-radius:50%;filter:blur(4px);opacity:.22}
-.hero:before{width:420px;height:420px;background:#2dc4ee;right:-130px;top:-180px}
-.hero:after{width:300px;height:300px;background:#0fd29d;left:-160px;bottom:-180px}
-.hero-grid{position:relative;z-index:2;display:grid;grid-template-columns:1.08fr .92fr;gap:44px;align-items:center}
-.eyebrow{letter-spacing:3.5px;color:var(--gold);font-size:13px;font-weight:800}
-.hero h1{font-size:68px;line-height:.92;margin:14px 0 20px;letter-spacing:-2px}.hero h1 b{color:var(--sky)}
-.hero h2{font-size:27px;margin:0 0 10px}.hero p{font-size:18px;line-height:1.65;max-width:670px;color:#e8f5fb}
-.actions{display:flex;gap:14px;flex-wrap:wrap;margin-top:26px}.phone{background:white;color:var(--ink);box-shadow:none}
-.features{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin-top:30px}
-.feature{display:flex;align-items:center;gap:10px;background:#ffffff12;border:1px solid #ffffff26;border-radius:16px;padding:14px 15px;font-size:14px}
-.feature-icon{width:34px;height:34px;display:grid;place-items:center;border-radius:10px;background:#ffffff15}
-.hero-photo{position:relative;min-height:560px;display:flex;align-items:flex-end;justify-content:center}
-.hero-photo:before{content:"";position:absolute;width:86%;height:86%;border-radius:40% 40% 22% 22%;background:linear-gradient(180deg,#ffffff14,#31c5ec17);border:1px solid #ffffff22;bottom:0}
-.hero-photo img{position:relative;z-index:1;width:100%;max-height:560px;object-fit:contain;object-position:center bottom;filter:drop-shadow(0 28px 32px rgba(0,0,0,.28))}
-.enroll{background:white;margin:-20px auto 24px;border-radius:22px;padding:20px;box-shadow:var(--shadow);display:grid;grid-template-columns:1.2fr repeat(3,1fr) 1.25fr;gap:12px;align-items:center;position:relative;z-index:4}
-.date{padding:8px 16px;border-left:1px solid #e5edf2}.date b{color:var(--navy)}.date small{color:var(--muted);line-height:1.4}
-.count{background:linear-gradient(135deg,#062c46,#0b5575);color:white;padding:15px;border-radius:15px;text-align:center}.count b{display:block;margin-top:3px}
-.section{padding:50px 0}.section-title{text-align:center;margin:0 0 28px}.section-title span{display:block;color:var(--teal);font-size:12px;letter-spacing:2.5px;font-weight:900;text-transform:uppercase}.section-title h2{font-size:39px;margin:8px 0 8px}.section-title p{max-width:700px;margin:0 auto;color:var(--muted);line-height:1.6}
-.insurance-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px}
-.insurance-card{position:relative;overflow:hidden;min-height:430px;border-radius:28px;padding:32px;box-shadow:var(--shadow);background:white}
-.insurance-card .kicker{font-size:12px;letter-spacing:2px;font-weight:900;color:var(--teal)}
-.insurance-card h3{font-size:46px;margin:7px 0 10px;letter-spacing:-1px}
-.insurance-card h2{font-size:22px;max-width:400px;line-height:1.25;margin:0 0 18px}
-.insurance-card ul{line-height:1.9;padding-left:20px;margin:0 0 24px;max-width:410px}
-.health{background:linear-gradient(135deg,#ffffff 0%,#e5f7ff 72%,#d0f0f8 100%)}
-.life{background:linear-gradient(135deg,#fffefa 0%,#fff1cf 72%,#f9deb0 100%)}
-.insurance-visual{position:absolute;right:-35px;bottom:-35px;width:245px;height:245px;border-radius:50%;display:grid;place-items:center;opacity:.95}
-.health .insurance-visual{background:linear-gradient(135deg,#d7f5ff,#9fe0f3)}
-.life .insurance-visual{background:linear-gradient(135deg,#fff0c7,#f0c76f)}
-.insurance-icon{width:118px;height:118px;filter:drop-shadow(0 14px 25px rgba(0,0,0,.10))}
-.insurance-glow{position:absolute;width:115px;height:115px;border-radius:50%;top:30px;right:32px;background:#fff8;filter:blur(1px)}
-.about{display:grid;grid-template-columns:.92fr 1.08fr;gap:26px;align-items:stretch}
-.about-photo{background:linear-gradient(180deg,#0b4563,#062f4a);border-radius:28px;overflow:hidden;min-height:560px;box-shadow:var(--shadow)}
-.about-photo img{width:100%;height:100%;object-fit:cover;object-position:center 20%;display:block}
-.about-card{background:white;border-radius:28px;padding:38px;box-shadow:var(--shadow);display:flex;flex-direction:column;justify-content:center}
-.about-card .tag{display:inline-flex;width:max-content;padding:7px 12px;border-radius:999px;background:#e8f7f4;color:#08786d;font-size:12px;font-weight:900;letter-spacing:1px;text-transform:uppercase}
-.about-card h2{font-size:42px;margin:14px 0}.about-card p{font-size:17px;line-height:1.7;color:#49687a}
-.checks{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:16px 0 24px}.check{background:#f2f8fb;border-radius:14px;padding:12px 14px;font-weight:700}
-.states-card{background:white;border-radius:28px;padding:34px;box-shadow:var(--shadow);margin-top:26px}.states-card h2{margin-top:0}.states{columns:4;line-height:1.95;color:#36556a}
-.social-section{background:linear-gradient(120deg,#062f4a,#0a5778);color:white;overflow:hidden}
-.social-wrap{display:grid;grid-template-columns:1fr 1fr;gap:22px;align-items:center}.social-copy h2{font-size:42px;margin:8px 0 12px}.social-copy p{color:#dff3fb;line-height:1.65;max-width:520px}
-.social-cards{display:grid;grid-template-columns:1fr 1fr;gap:16px}.social-card{display:flex;align-items:center;gap:14px;padding:20px;border-radius:20px;background:#ffffff12;border:1px solid #ffffff25;text-decoration:none;transition:.2s}
-.social-card:hover{background:#ffffff1d;transform:translateY(-3px)}.social-icon{width:52px;height:52px;border-radius:15px;background:white;color:var(--navy);display:grid;place-items:center;flex:0 0 auto}.social-card b{display:block;font-size:17px}.social-card span{font-size:13px;color:#d4edf7}
-.testimonials{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.quote{background:white;border-radius:20px;padding:24px;box-shadow:0 8px 28px #1231;line-height:1.6}.quote b{display:block;margin-top:12px}.stars{color:#f5aa00;letter-spacing:2px;margin-top:6px}
-footer{background:#041f31;color:white;padding:34px 0}.footer-grid{display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap}.footer-links a{color:white;text-decoration:none;margin-right:15px}
-@media(max-width:920px){
-  .links{display:none}.hero-grid,.about,.social-wrap{grid-template-columns:1fr}.hero h1{font-size:56px}.hero-photo{min-height:430px}.hero-photo img{max-height:430px}
-  .enroll{grid-template-columns:1fr 1fr}.date{border-left:0;border-top:1px solid #e5edf2}.insurance-grid{grid-template-columns:1fr}.states{columns:3}
-}
-@media(max-width:620px){
-  .wrap{padding:0 18px}.nav{min-height:70px}.nav>.btn{display:none}.logo{font-size:19px}.hero{padding-top:48px}.hero h1{font-size:45px}.hero h2{font-size:23px}
-  .features,.social-cards,.checks{grid-template-columns:1fr}.hero-photo{min-height:370px}.hero-photo img{max-height:370px}.enroll{grid-template-columns:1fr;margin-top:-8px}
-  .insurance-card{padding:26px;min-height:465px}.insurance-card h3{font-size:39px}.insurance-visual{width:200px;height:200px;right:-45px}.insurance-icon{width:94px;height:94px}
-  .section-title h2,.social-copy h2,.about-card h2{font-size:32px}.about-card{padding:28px}.about-photo{min-height:430px}.states{columns:2}.testimonials{grid-template-columns:1fr}
-}
+:root{--navy:#07344d;--teal:#159fb6;--green:#5a8d12;--gold:#e8bd63;--paper:#f5f9fb;--ink:#12384b;--muted:#607b89;--shadow:0 18px 50px rgba(7,52,77,.13)}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:Inter,Arial,sans-serif;background:var(--paper);color:var(--ink)}a{color:inherit}.wrap{max-width:1180px;margin:auto;padding:0 24px}
+header{position:sticky;top:0;z-index:20;background:rgba(255,255,255,.97);box-shadow:0 2px 16px #0001;backdrop-filter:blur(10px)}.nav{min-height:82px;display:flex;align-items:center;justify-content:space-between;gap:18px}.brand-logo{width:175px;height:64px;object-fit:contain;object-position:left center}.links{display:flex;gap:18px}.links a{text-decoration:none;font-size:14px;font-weight:700;color:#294c5f}.links a:hover{color:var(--teal)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:14px 22px;border-radius:999px;background:#168c4b;color:#fff;text-decoration:none;font-weight:800;box-shadow:0 8px 22px #168c4b2c;transition:.2s}.btn:hover{transform:translateY(-2px)}
+.hero{position:relative;overflow:hidden;background:linear-gradient(110deg,#052f47 0%,#075878 58%,#061f2e 100%);color:#fff;padding:64px 0 48px}.hero:before{content:"";position:absolute;width:450px;height:450px;border-radius:50%;background:#27c0e833;right:-120px;top:-180px}.hero-grid{position:relative;z-index:1;display:grid;grid-template-columns:1.08fr .92fr;gap:42px;align-items:center}.eyebrow{letter-spacing:3.2px;color:#f0ca74;font-size:13px;font-weight:900}.hero h1{font-size:68px;line-height:.92;margin:14px 0 20px;letter-spacing:-2px}.hero h1 b{color:#38c4ed}.hero h2{font-size:27px;margin:0 0 10px}.hero p{font-size:18px;line-height:1.65;color:#e7f5fb;max-width:670px}.actions{display:flex;gap:14px;flex-wrap:wrap;margin-top:25px}.phone{background:#fff;color:var(--ink);box-shadow:none}.features{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin-top:30px}.feature{display:flex;align-items:center;gap:10px;background:#ffffff12;border:1px solid #ffffff25;border-radius:16px;padding:14px}.feature span{font-size:21px}.hero-photo{min-height:560px;display:flex;align-items:flex-end;justify-content:center;position:relative}.hero-photo:before{content:"";position:absolute;bottom:0;width:88%;height:88%;border-radius:42% 42% 20% 20%;background:linear-gradient(180deg,#ffffff16,#24c5df18);border:1px solid #ffffff22}.hero-photo img{position:relative;z-index:1;width:100%;max-height:560px;object-fit:contain;object-position:center bottom;filter:drop-shadow(0 28px 34px #0007)}
+.enroll{background:#fff;margin:-20px auto 20px;border-radius:22px;padding:20px;box-shadow:var(--shadow);display:grid;grid-template-columns:1.2fr repeat(3,1fr) 1.25fr;gap:12px;align-items:center;position:relative;z-index:3}.date{padding:8px 16px;border-left:1px solid #e3ecf0}.date small{color:var(--muted)}.count{background:linear-gradient(135deg,#06304a,#08708a);color:#fff;padding:15px;border-radius:15px;text-align:center}
+.section{padding:54px 0}.section-title{text-align:center;margin-bottom:30px}.section-title span{display:block;color:#0b8c82;font-size:12px;letter-spacing:2.4px;font-weight:900;text-transform:uppercase}.section-title h2{font-size:40px;margin:8px 0}.section-title p{max-width:700px;margin:0 auto;color:var(--muted);line-height:1.65}
+.insurance-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px}.insurance-card{position:relative;overflow:hidden;min-height:470px;border-radius:28px;padding:32px;box-shadow:var(--shadow);background:#fff}.insurance-card .kicker{font-size:12px;letter-spacing:2px;font-weight:900;color:#0b8c82}.insurance-card h3{font-size:46px;margin:6px 0 8px}.insurance-card h2{font-size:22px;max-width:360px;margin:0 0 17px}.insurance-card ul{line-height:1.85;padding-left:20px;max-width:390px;margin-bottom:25px}.health{background:linear-gradient(135deg,#fff 0%,#e3f7ff 65%,#cdeff5 100%)}.life{background:linear-gradient(135deg,#fff 0%,#fff4d7 65%,#f4dfaa 100%)}
+.banner-art{position:absolute;right:-35px;bottom:-10px;width:260px;height:270px;display:flex;align-items:flex-end;justify-content:center}.banner-art svg{width:240px;height:240px;filter:drop-shadow(0 16px 18px #0002)}.health-art{background:radial-gradient(circle at 60% 60%,#fff 0 28%,transparent 29%)}.life-art{background:radial-gradient(circle at 60% 60%,#fff9 0 28%,transparent 29%)}
+.about{display:grid;grid-template-columns:.92fr 1.08fr;gap:26px;align-items:stretch}.about-photo{border-radius:28px;overflow:hidden;min-height:560px;background:#07344d;box-shadow:var(--shadow)}.about-photo img{width:100%;height:100%;object-fit:cover;object-position:center 18%;display:block}.about-card{background:#fff;border-radius:28px;padding:38px;box-shadow:var(--shadow);display:flex;flex-direction:column;justify-content:center}.tag{display:inline-flex;width:max-content;padding:7px 12px;border-radius:999px;background:#e5f7f2;color:#08786d;font-size:12px;font-weight:900;letter-spacing:1px;text-transform:uppercase}.about-card h2{font-size:42px;margin:14px 0}.about-card p{font-size:17px;line-height:1.7;color:#4e6a7b}.checks{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:16px 0 24px}.check{background:#f1f7fa;border-radius:14px;padding:12px 14px;font-weight:700}.states-card{background:#fff;border-radius:28px;padding:34px;box-shadow:var(--shadow);margin-top:26px}.states{columns:4;line-height:1.95;color:#36556a}
+.social-section{background:linear-gradient(120deg,#062f4a,#0a607d);color:#fff}.social-wrap{display:grid;grid-template-columns:1fr 1fr;gap:26px;align-items:center}.social-copy h2{font-size:42px;margin:8px 0 12px}.social-copy p{color:#dff3fb;line-height:1.65}.social-cards{display:grid;grid-template-columns:1fr 1fr;gap:16px}.social-card{min-height:180px;border-radius:24px;text-decoration:none;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px;padding:22px;text-align:center;transition:.2s;box-shadow:0 15px 30px #0002}.social-card:hover{transform:translateY(-4px)}.instagram{background:linear-gradient(135deg,#833ab4,#fd1d1d 58%,#fcb045)}.facebook{background:linear-gradient(135deg,#1877f2,#0c54b8)}.social-icon{width:68px;height:68px;border-radius:20px;background:#fff;display:grid;place-items:center}.instagram .social-icon{color:#d62d78}.facebook .social-icon{color:#1877f2}.social-card b{font-size:20px}.social-card small{color:#fff;opacity:.93}
+.testimonials{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.quote{background:#fff;border-radius:20px;padding:24px;box-shadow:0 8px 28px #1231;line-height:1.6}.quote b{display:block;margin-top:12px}.stars{color:#f5aa00;letter-spacing:2px;margin-top:6px}footer{background:#041f31;color:#fff;padding:34px 0}.footer-grid{display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap}.footer-logo{width:150px;background:#fff;border-radius:12px;padding:7px}.footer-links a{color:#fff;text-decoration:none;margin-right:15px}
+@media(max-width:920px){.links{display:none}.hero-grid,.about,.social-wrap{grid-template-columns:1fr}.hero h1{font-size:56px}.hero-photo{min-height:430px}.hero-photo img{max-height:430px}.enroll{grid-template-columns:1fr 1fr}.date{border-left:0;border-top:1px solid #e3ecf0}.insurance-grid{grid-template-columns:1fr}.states{columns:3}}
+@media(max-width:620px){.wrap{padding:0 18px}.nav>.btn{display:none}.brand-logo{width:145px}.hero h1{font-size:45px}.hero h2{font-size:23px}.features,.social-cards,.checks{grid-template-columns:1fr}.hero-photo{min-height:380px}.hero-photo img{max-height:380px}.enroll{grid-template-columns:1fr;margin-top:-8px}.insurance-card{min-height:510px;padding:26px}.insurance-card h3{font-size:39px}.banner-art{width:205px;height:215px;right:-35px}.banner-art svg{width:190px;height:190px}.section-title h2,.social-copy h2,.about-card h2{font-size:32px}.about-card{padding:28px}.about-photo{min-height:440px}.states{columns:2}.testimonials{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
-<header>
-  <div class="wrap nav">
-    <div class="logo"><span>RV</span> RICHARD VARGAS<br><small>INSURANCE</small></div>
-    <nav class="links">
-      <a href="#inicio">Inicio</a><a href="#salud">Salud</a><a href="#vida">Vida</a><a href="#agente">Agente</a><a href="#redes">Redes</a><a href="#contacto">Contacto</a>
-    </nav>
-    <a class="btn" href="https://wa.me/13469070026">WhatsApp · Contáctame</a>
-  </div>
-</header>
-
+<header><div class="wrap nav"><a href="#inicio"><img class="brand-logo" src="assets/richard-logo.png" alt="Richard Vargas Insurance"></a><nav class="links"><a href="#inicio">Inicio</a><a href="#salud">Salud</a><a href="#vida">Vida</a><a href="#agente">Agente</a><a href="#redes">Redes</a><a href="#contacto">Contacto</a></nav><a class="btn" href="https://wa.me/13469070026">WhatsApp · Contáctame</a></div></header>
 <main id="inicio">
-  <section class="hero">
-    <div class="wrap hero-grid">
-      <div>
-        <div class="eyebrow">TU SALUD. TU FAMILIA. TU TRANQUILIDAD.</div>
-        <h1>Open<br>Enrollment<br><b>2027</b></h1>
-        <h2>Es el momento de asegurar lo más importante.</h2>
-        <p>Te ayudo a encontrar el plan de salud ideal para ti y tu familia, con asesoría personalizada, clara y en tu idioma.</p>
-        <div class="actions">
-          <a class="btn" href="https://wa.me/13469070026">Habla conmigo por WhatsApp →</a>
-          <a class="btn phone" href="tel:+13469070026">☎ +1 (346) 907-0026</a>
-        </div>
-        <div class="features">
-          <div class="feature"><span class="feature-icon">👥</span>Asesoría personalizada</div>
-          <div class="feature"><span class="feature-icon">🛡️</span>Planes confiables</div>
-          <div class="feature"><span class="feature-icon">💬</span>Atención en español</div>
-          <div class="feature"><span class="feature-icon">📋</span>Acompañamiento completo</div>
-        </div>
-      </div>
-      <div class="hero-photo"><img src="assets/richard-hero.jpg" alt="Richard Vargas, agente de seguros"></div>
-    </div>
-  </section>
-
-  <div class="wrap enroll">
-    <strong>📅 Fechas importantes<br>Open Enrollment 2027</strong>
-    <div class="date"><b>1 NOV 2026</b><br><small>Comienza el enrollment</small></div>
-    <div class="date"><b>15 DIC 2026</b><br><small>Último día para cobertura desde el 1 de enero</small></div>
-    <div class="date"><b>15 ENE 2027</b><br><small>Finaliza el período de inscripción</small></div>
-    <div class="count">Faltan<br><b id="timer">Calculando…</b></div>
-  </div>
-
-  <section class="section wrap">
-    <div class="section-title">
-      <span>Protección pensada para ti</span>
-      <h2>Seguros para cuidar tu presente y tu futuro</h2>
-      <p>Te explico cada opción de forma sencilla para que puedas elegir con confianza la cobertura que mejor se adapte a tus necesidades.</p>
-    </div>
-
-    <div class="insurance-grid">
-      <article id="salud" class="insurance-card health">
-        <div class="insurance-glow"></div>
-        <div class="kicker">SEGURO DE</div>
-        <h3>Salud</h3>
-        <h2>Cuida hoy tu bienestar y el de tu familia</h2>
-        <ul>
-          <li>Acceso a médicos y hospitales</li>
-          <li>Prevención y atención oportuna</li>
-          <li>Planes que se ajustan a tus necesidades</li>
-          <li>Asesoría durante todo el proceso</li>
-        </ul>
-        <a class="btn" href="https://wa.me/13469070026">Conoce tus opciones →</a>
-        <div class="insurance-visual" aria-hidden="true">
-          <svg class="insurance-icon" viewBox="0 0 120 120" fill="none">
-            <path d="M60 105s-34-18-42-44C12 40 27 23 46 28c6 2 11 6 14 11 3-5 8-9 14-11 19-5 34 12 28 33-8 26-42 44-42 44Z" fill="white"/>
-            <path d="M60 47v27M46.5 60.5h27" stroke="#0A7D9E" stroke-width="9" stroke-linecap="round"/>
-          </svg>
-        </div>
-      </article>
-
-      <article id="vida" class="insurance-card life">
-        <div class="insurance-glow"></div>
-        <div class="kicker">SEGURO DE</div>
-        <h3>Vida</h3>
-        <h2>Protección para hoy y tranquilidad para quienes más amas</h2>
-        <ul>
-          <li>Protección para tu familia</li>
-          <li>Respaldo financiero en momentos difíciles</li>
-          <li>Opciones según tu etapa de vida</li>
-          <li>Asesoría clara y sin complicaciones</li>
-        </ul>
-        <a class="btn" href="https://wa.me/13469070026">Conoce tus opciones →</a>
-        <div class="insurance-visual" aria-hidden="true">
-          <svg class="insurance-icon" viewBox="0 0 120 120" fill="none">
-            <path d="M60 10 100 27v28c0 29-18 47-40 55-22-8-40-26-40-55V27L60 10Z" fill="white"/>
-            <path d="M38 63c6-9 14-14 22-14s16 5 22 14M48 43a12 12 0 1 0 24 0 12 12 0 0 0-24 0Z" stroke="#B98720" stroke-width="7" stroke-linecap="round"/>
-          </svg>
-        </div>
-      </article>
-    </div>
-  </section>
-
-  <section id="agente" class="section wrap">
-    <div class="about">
-      <div class="about-photo"><img src="assets/richard-about.jpg" alt="Richard Vargas"></div>
-      <article class="about-card">
-        <span class="tag">Tu agente de confianza</span>
-        <h2>Hola, soy Richard Vargas</h2>
-        <p>Soy agente de seguros de salud y vida. Mi compromiso es brindarte información clara, honesta y personalizada para que tomes una decisión informada para ti y tu familia.</p>
-        <p>No se trata solo de elegir una póliza: se trata de entender tu situación, tus prioridades y encontrar una alternativa que realmente tenga sentido para ti.</p>
-        <div class="checks">
-          <div class="check">✓ Agente certificado</div>
-          <div class="check">✓ Asesoría en español</div>
-          <div class="check">✓ Atención personalizada</div>
-          <div class="check">✓ Acompañamiento de principio a fin</div>
-        </div>
-        <a class="btn" href="https://wa.me/13469070026">Conversemos por WhatsApp →</a>
-      </article>
-    </div>
-
-    <article id="estados" class="states-card">
-      <h2>🇺🇸 Atiendo en estos 20 estados</h2>
-      <div class="states">
-        ✓ Alabama<br>✓ Arkansas<br>✓ Michigan<br>✓ Florida<br>✓ Ohio<br>✓ Wisconsin<br>✓ Tennessee<br>✓ South Carolina<br>✓ North Carolina<br>✓ Nebraska<br>✓ Maryland<br>✓ Kansas<br>✓ Illinois<br>✓ Virginia<br>✓ Utah<br>✓ Texas<br>✓ Minnesota<br>✓ Indiana<br>✓ Georgia<br>✓ Louisiana
-      </div>
-    </article>
-  </section>
-
-  <section id="redes" class="section social-section">
-    <div class="wrap social-wrap">
-      <div class="social-copy">
-        <div class="eyebrow">SÍGUEME EN REDES SOCIALES</div>
-        <h2>Información, consejos y novedades para proteger lo que más importa</h2>
-        <p>Conecta conmigo en Instagram y Facebook. Allí comparto contenido sobre seguros de salud, seguros de vida, Open Enrollment y temas que pueden ayudarte a tomar mejores decisiones.</p>
-      </div>
-      <div class="social-cards">
-        <a class="social-card" href="https://www.instagram.com/richardvargasinsurance/" target="_blank" rel="noopener">
-          <span class="social-icon">
-            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
-          </span>
-          <span><b>Instagram</b><span>@richardvargasinsurance</span></span>
-        </a>
-        <a class="social-card" href="https://www.facebook.com/share/18xVtxHpxf/?mibextid=wwXIfr" target="_blank" rel="noopener">
-          <span class="social-icon">
-            <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor"><path d="M14 8h3V4h-3c-3.3 0-5 2-5 5v2H6v4h3v7h4v-7h3.4l.6-4H13V9c0-.7.3-1 1-1Z"/></svg>
-          </span>
-          <span><b>Facebook</b><span>Visita mi perfil</span></span>
-        </a>
-      </div>
-    </div>
-  </section>
-
-  <section class="section wrap">
-    <div class="section-title">
-      <span>Experiencias</span>
-      <h2>Lo que dicen mis clientes</h2>
-    </div>
-    <div class="testimonials">
-      <div class="quote">“Richard me explicó todo de forma muy clara. Ahora mi familia tiene el plan que realmente necesitamos.”<b>— Cliente, Texas</b><div class="stars">★★★★★</div></div>
-      <div class="quote">“Excelente servicio, siempre responde y te acompaña en todo el proceso.”<b>— Cliente, Florida</b><div class="stars">★★★★★</div></div>
-      <div class="quote">“Profesional, honesto y en tu idioma. 100% recomendado.”<b>— Cliente, Georgia</b><div class="stars">★★★★★</div></div>
-    </div>
-  </section>
-</main>
-
-<footer id="contacto">
-  <div class="wrap footer-grid">
-    <div><b>RICHARD VARGAS INSURANCE</b><br><span style="color:#bcd7e5">Salud · Vida · Tu tranquilidad</span></div>
-    <div class="footer-links">
-      ☎ <a href="tel:+13469070026">+1 (346) 907-0026</a>
-      <a href="https://www.instagram.com/richardvargasinsurance/" target="_blank" rel="noopener">Instagram</a>
-      <a href="https://www.facebook.com/share/18xVtxHpxf/?mibextid=wwXIfr" target="_blank" rel="noopener">Facebook</a>
-    </div>
-    <a class="btn" href="https://wa.me/13469070026">Quiero mi asesoría →</a>
-  </div>
-</footer>
-
-<script>
-function tick(){
-  const d=new Date('2026-11-01T00:00:00');
-  let x=d-new Date();
-  if(x<0){document.getElementById('timer').textContent='Open Enrollment activo';return}
-  let days=Math.floor(x/86400000),h=Math.floor(x/3600000)%24,m=Math.floor(x/60000)%60,s=Math.floor(x/1000)%60;
-  document.getElementById('timer').textContent=`${days} DÍAS · ${h} H · ${m} M · ${s} S`
-}
-tick();setInterval(tick,1000)
-</script>
-</body>
-</html>
+<section class="hero"><div class="wrap hero-grid"><div><div class="eyebrow">TU SALUD. TU FAMILIA. TU TRANQUILIDAD.</div><h1>Open<br>Enrollment<br><b>2027</b></h1><h2>Es el momento de asegurar lo más importante.</h2><p>Te ayudo a encontrar el plan de salud ideal para ti y tu familia, con asesoría personalizada, clara y en tu idioma.</p><div class="actions"><a class="btn" href="https://wa.me/13469070026">Habla conmigo por WhatsApp →</a><a class="btn phone" href="tel:+13469070026">☎ +1 (346) 907-0026</a></div><div class="features"><div class="feature"><span>👥</span>Asesoría personalizada</div><div class="feature"><span>🛡️</span>Planes confiables</div><div class="feature"><span>💬</span>Atención en español</div><div class="feature"><span>📋</span>Acompañamiento completo</div></div></div><div class="hero-photo"><img src="assets/richard-hero.jpg" alt="Richard Vargas, agente de seguros"></div></div></section>
+<div class="wrap enroll"><strong>📅 Fechas importantes<br>Open Enrollment 2027</strong><div class="date"><b>1 NOV 2026</b><br><small>Comienza el enrollment</small></div><div class="date"><b>15 DIC 2026</b><br><small>Último día para cobertura desde el 1 de enero</small></div><div class="date"><b>15 ENE 2027</b><br><small>Finaliza el período de inscripción</small></div><div class="count">Faltan<br><b id="timer">Calculando…</b></div></div>
+<section class="section wrap"><div class="section-title"><span>Protección pensada para ti</span><h2>Seguros para cuidar tu presente y tu futuro</h2><p>Te explico cada opción de forma sencilla para que puedas elegir con confianza la cobertura que mejor se adapte a tus necesidades.</p></div><div class="insurance-grid">
+<article id="salud" class="insurance-card health"><div class="kicker">SEGURO DE</div><h3>Salud</h3><h2>Cuida hoy tu bienestar y el de tu familia</h2><ul><li>Acceso a médicos y hospitales</li><li>Prevención y atención oportuna</li><li>Planes que se ajustan a tus necesidades</li><li>Asesoría durante todo el proceso</li></ul><a class="btn" href="https://wa.me/13469070026">Conoce tus opciones →</a><div class="banner-art health-art" aria-hidden="true"><svg viewBox="0 0 240 240"><circle cx="120" cy="120" r="104" fill="#fff"/><path d="M120 54c-17-25-57-20-67 11-14 43 27 82 67 110 40-28 81-67 67-110-10-31-50-36-67-11Z" fill="#d8f4fb"/><path d="M120 80v63M89 111h62" stroke="#159fb6" stroke-width="18" stroke-linecap="round"/><circle cx="182" cy="57" r="27" fill="#5a8d12"/><path d="M171 57l8 8 15-18" fill="none" stroke="#fff" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/></svg></div></article>
+<article id="vida" class="insurance-card life"><div class="kicker">SEGURO DE</div><h3>Vida</h3><h2>Protección para hoy y tranquilidad para quienes más amas</h2><ul><li>Protección para tu familia</li><li>Respaldo financiero en momentos difíciles</li><li>Opciones según tu etapa de vida</li><li>Asesoría clara y sin complicaciones</li></ul><a class="btn" href="https://wa.me/13469070026">Conoce tus opciones →</a><div class="banner-art life-art" aria-hidden="true"><svg viewBox="0 0 240 240"><circle cx="120" cy="120" r="104" fill="#fffaf0"/><path d="M120 38 194 69v50c0 54-32 84-74 101-42-17-74-47-74-101V69l74-31Z" fill="#f3d98d"/><circle cx="120" cy="95" r="24" fill="#fff"/><path d="M75 161c9-30 27-44 45-44s36 14 45 44" fill="#fff"/><path d="M92 151c-12-17-35-10-35 8 0 17 20 29 35 39 15-10 35-22 35-39 0-18-23-25-35-8Z" fill="#5a8d12"/></svg></div></article>
+</div></section>
+<section id="agente" class="section wrap"><div class="about"><div class="about-photo"><img src="assets/richard-about.jpg" alt="Richard Vargas"></div><article class="about-card"><span class="tag">Tu agente de confianza</span><h2>Hola, soy Richard Vargas</h2><p>Soy agente de seguros de salud y vida. Mi compromiso es brindarte información clara, honesta y personalizada para que tomes una decisión informada para ti y tu familia.</p><p>No se trata solo de elegir una póliza: se trata de entender tu situación, tus prioridades y encontrar una alternativa que realmente tenga sentido para ti.</p><div class="checks"><div class="check">✓ Agente certificado</div><div class="check">✓ Asesoría en español</div><div class="check">✓ Atención personalizada</div><div class="check">✓ Acompañamiento de principio a fin</div></div><a class="btn" href="https://wa.me/13469070026">Conversemos por WhatsApp →</a></article></div><article id="estados" class="states-card"><h2>🇺🇸 Atiendo en estos 20 estados</h2><div class="states">✓ Alabama<br>✓ Arkansas<br>✓ Michigan<br>✓ Florida<br>✓ Ohio<br>✓ Wisconsin<br>✓ Tennessee<br>✓ South Carolina<br>✓ North Carolina<br>✓ Nebraska<br>✓ Maryland<br>✓ Kansas<br>✓ Illinois<br>✓ Virginia<br>✓ Utah<br>✓ Texas<br>✓ Minnesota<br>✓ Indiana<br>✓ Georgia<br>✓ Louisiana</div></article></section>
+<section id="redes" class="section social-section"><div class="wrap social-wrap"><div class="social-copy"><div class="eyebrow">SÍGUEME EN REDES SOCIALES</div><h2>Información y consejos para proteger lo que más importa</h2><p>Conecta conmigo en Instagram y Facebook para conocer novedades sobre seguros de salud, seguros de vida y Open Enrollment.</p></div><div class="social-cards"><a class="social-card instagram" href="https://www.instagram.com/richardvargasinsurance/" target="_blank" rel="noopener"><span class="social-icon"><svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></span><b>Instagram</b><small>@richardvargasinsurance</small></a><a class="social-card facebook" href="https://www.facebook.com/share/18xVtxHpxf/?mibextid=wwXIfr" target="_blank" rel="noopener"><span class="social-icon"><svg width="42" height="42" viewBox="0 0 24 24" fill="currentColor"><path d="M14 8h3V4h-3c-3.3 0-5 2-5 5v2H6v4h3v7h4v-7h3.4l.6-4H13V9c0-.7.3-1 1-1Z"/></svg></span><b>Facebook</b><small>Visita mi perfil</small></a></div></div></section>
+<section class="section wrap"><div class="section-title"><span>Experiencias</span><h2>Lo que dicen mis clientes</h2></div><div class="testimonials"><div class="quote">“Richard me explicó todo de forma muy clara. Ahora mi familia tiene el plan que realmente necesitamos.”<b>— Cliente, Texas</b><div class="stars">★★★★★</div></div><div class="quote">“Excelente servicio, siempre responde y te acompaña en todo el proceso.”<b>— Cliente, Florida</b><div class="stars">★★★★★</div></div><div class="quote">“Profesional, honesto y en tu idioma. 100% recomendado.”<b>— Cliente, Georgia</b><div class="stars">★★★★★</div></div></div></section>
+</main><footer id="contacto"><div class="wrap footer-grid"><img class="footer-logo" src="assets/richard-logo.png" alt="Richard Vargas Insurance"><div class="footer-links">☎ <a href="tel:+13469070026">+1 (346) 907-0026</a><a href="https://www.instagram.com/richardvargasinsurance/" target="_blank">Instagram</a><a href="https://www.facebook.com/share/18xVtxHpxf/?mibextid=wwXIfr" target="_blank">Facebook</a></div><a class="btn" href="https://wa.me/13469070026">Quiero mi asesoría →</a></div></footer>
+<script>function tick(){const d=new Date('2026-11-01T00:00:00');let x=d-new Date();if(x<0){document.getElementById('timer').textContent='Open Enrollment activo';return}let days=Math.floor(x/86400000),h=Math.floor(x/3600000)%24,m=Math.floor(x/60000)%60,s=Math.floor(x/1000)%60;document.getElementById('timer').textContent=`${days} DÍAS · ${h} H · ${m} M · ${s} S`}tick();setInterval(tick,1000)</script>
+</body></html>
